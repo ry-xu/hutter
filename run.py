@@ -28,11 +28,11 @@ verbose = True
 lstm_hidden_size = 16
 lstm_num_layers = 2
 
-model = LSTMModel(hidden_size=lstm_hidden_size, num_layers=lstm_num_layers)
-
 ## train
 dataset = ChunkByteDataset(data, seq_len=seq_len)
 dataloader = torch.utils.data.DataLoader(dataset, batch_size=batch_size, shuffle=True, drop_last=True)
+
+model = LSTMModel(hidden_size=lstm_hidden_size, num_layers=lstm_num_layers)
 
 train(
     model,

@@ -33,7 +33,7 @@ def print_compression_stats(nats, model_size_bytes=0, data_len=0):
         compressed_bytes = data_len / compression_ratio + model_size_bytes
         effective_ratio = dataset_bytes / compressed_bytes
 
-        print(f"\nEffective Compression Ratio: {effective_ratio:.2f}x")
+        print(f"\nEffective Compression Ratio (with model): {effective_ratio:.2f}x")
 
     print("─" * 40)
 
